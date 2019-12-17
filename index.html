@@ -2,8 +2,21 @@
 <html>
 <head>
 	<title>Evanescence</title>
-	<meta name = "description" content = "This is the description">
+	<meta name = "description" content = "Evanescence website">
 	<link rel = "stylesheet" href = "styles.css"/>
+    <script type="text/javascript">
+    	function play(){
+       	var audio = document.getElementById("audio");
+       	var playButton = document.getElementById("play");
+        if (audio.paused) {
+        audio.play();
+        playButton.innerHTML = "| |"
+    		} else {
+    		audio.pause();
+    		playButton.innerHTML = "&#9658;"
+    		}
+        }
+     </script>
 </head>
 <body>
 	<header class = "main-header">
@@ -15,7 +28,8 @@
 			</ul>
 		</nav>
 		<h1 class = "band-name band-name-large">Evanescence</h1>
-		<button class = "btn btn-header btn-play" type = "button">&#9658;</button>
+		<button id = "play" class = "btn btn-header btn-play" type = "button" value = "PLAY" onclick = "play()">&#9658;</button>
+		<audio id = "audio" src = "mix.mp3"></audio>
 	</header>
 	<section class = "content-section container">
 		<h2 class = "section-header">TOURS</h2>
@@ -53,14 +67,14 @@
 		</div>
 	</section>
 <footer class = "main-footer">
-		<div class = "container main-footer-container">
+	<div class = "container main-footer-container">
 		<h3 class= "band-name">Evanescence</h3>
 		<ul class = "nav footer-nav">
 			<li><a href = "https://www.youtube.com/channel/UCJeH7gl6PbDVV4DTldIOPOA" target = "_blank"><img src = "images/youtube-icon.png"></a></li>
 			<li><a href = "https://open.spotify.com/artist/5nGIFgo0shDenQYSE0Sn7c" target = "_blank"><img src = "images/spotify-icon.png"></a></li>
 			<li><a href = "https://www.facebook.com/Evanescence/" target = "_blank"><img src = "images/facebook-icon.png"></a></li>
 		</ul>
-	</div>
+		</div>
 	</footer>
 </body>
 </html>
